@@ -13,9 +13,37 @@ namespace EcommerceSite
     public partial class Default : System.Web.UI.Page
     {
         public List<Products> products_list = new List<Products>();
+        static List<Products> cart_list = new List<Products>();
+
         protected void Page_Load(object sender, EventArgs e)
         {
             load_Products();
+            if (Request.QueryString.AllKeys.Contains("pro_id") && Request.QueryString.AllKeys.Contains("action"))
+            {
+                string pro_id = Request.QueryString["pro_id"];
+                string action = Request.QueryString["action"];
+
+                if (action.Equals("add"))
+                {
+                    add_to_cart(pro_id);
+                }
+
+            }
+
+        }
+
+        void add_to_cart(string product_id)
+        {
+
+            var product = products_list.Where(x => x.id == product_id);
+
+            foreach (var data in product) {
+                cart_list.Add(data);
+            }
+
+            Session["cart"] = cart_list;
+            
+
         }
 
         void load_Products()
@@ -32,7 +60,7 @@ namespace EcommerceSite
             {
                 while (reader.Read())
                 {
-                    products_list.Add(new Products(reader["product_id"].ToString(),reader["product_name"].ToString(), reader["product_price"].ToString(), reader["product_img"].ToString()));
+                    products_list.Add(new Products(reader["product_id"].ToString(),reader["product_name"].ToString(), reader["product_price"].ToString(), reader["product_img"].ToString(), reader["product_desc"].ToString()));
                 }
             }
 

@@ -1,0 +1,64 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="adminPanel.master.cs" Inherits="EcommerceSite.admin.pages.adminPanel" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Admin Panel - EcommerceSite</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+    <link href="../../style.css" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <nav class="navbar navbar-inverse">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>                        
+              </button>
+              <a class="navbar-brand" href="insertNewItem.aspx">AdminPanel</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="insertNewItem.aspx">Insert New Item</a></li>
+                <li><a href="removeAnItem.aspx">Remove An Item</a></li>                
+                <li><a href="allOrders.aspx">Orders</a></li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+                <li><span class="glyphicon glyphicon-log-out"></span><a href="../../Default.aspx"> <asp:Button ID="adminPanelSignOutBtn" runat="server" Text="Sign Out" /></a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+
+        <footer class="page-footer font-small teal pt-4">
+        <div class="container-fluid text-center text-md-left">
+        <hr class="clearfix w-100 d-md-none pb-3" />
+          <div class="row">
+            <div class="col-md-12 mt-md-0 mt-3">
+              
+                <h3>AdminPanel - EcommerceSite &copy; All Rights Reserved</h3>
+
+          </div>
+        </div>
+
+        <div class="footer-copyright text-center py-3">© 2019 Copyright:
+          <a href="#"> EcommerceSite</a>
+        </div>
+    </footer>
+    </div>
+    </form>
+</body>
+</html>

@@ -7,17 +7,17 @@
     <title>EcommerceSite</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
     <link href="style.css" rel="stylesheet" type="text/css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
     <div>
-        <nav class="navbar navbar-inverse">
+        <nav class="navbar navbar-default">
           <div class="container-fluid">
             <div class="navbar-header">
               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -25,31 +25,28 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>                        
               </button>
-              <a class="navbar-brand" href="#">EcommerceSite</a>
+              <a class="navbar-brand" href="Default.aspx">EcommerceSite</a>
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
               <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li class="dropdown">
-                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Products <span class="caret"></span></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Shoes</a></li>
-                    <li><a href="#">Shirts</a></li>
-                    <li><a href="#">Watches</a></li>
-                  </ul>
-                </li>
-                <li><a href="#">Contact Us</a></li>
-                <li><a href="#">About</a></li>
+                <li><a href="Default.aspx">Home</a></li>
+                <li><a href="#productSectionHeading">Shop</a></li>
+                <li><a href="contact.aspx">Contact Us</a></li>
+                <li><a href="about.aspx">About</a></li>
               </ul>
               <ul class="nav navbar-nav navbar-right">
-                <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                <li><a href="cartPage.aspx"><asp:Label runat="server" ID="cart_label" Text="0"></asp:Label>&nbsp;&nbsp;<span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+                  <asp:Panel ID="Panel1" runat="server">
+                      <li><a href="signUp.aspx"><span class="glyphicon glyphicon-user"></span>Sign Up</a></li>
+                      <li><a href="signIn.aspx"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
+                  </asp:Panel>
+                  <asp:Panel ID="Panel2" runat="server" Visible="true">
+                      <li><a href="Default.aspx"><span class="glyphicon glyphicon-log-in"></span>Logout</a></li>
+                  </asp:Panel>
               </ul>
             </div>
           </div>
         </nav>
-
 
         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
         
@@ -61,14 +58,18 @@
         <hr class="clearfix w-100 d-md-none pb-3" />
           <div class="row">
             <div class="col-md-6 mt-md-0 mt-3">
-              <h5 class="text-uppercase font-weight-bold">Footer text 1</h5>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita sapiente sint, nulla, nihil repudiandae commodi voluptatibus corrupti animi sequi aliquid magnam debitis, maxime quam recusandae harum esse fugiat. Itaque, culpa?</p>
+              <h5 class="text-uppercase font-weight-bold">Quick Links</h5>
+              <ul>
+                  <li class="nav"><a href="Default.aspx">Home</a></li>
+                  <li class="nav"><a href="#productSectionHeading">Shop</a></li>
+                  <li class="nav"><a href="contact.aspx">Contact</a></li>
+                  <li class="nav"><a href="about.aspx">About</a></li>
+              </ul>
 
             </div>
             <div class="col-md-6 mb-md-0 mb-3">
-              <h5 class="text-uppercase font-weight-bold">Footer text 2</h5>
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio deserunt fuga perferendis modi earum commodi aperiam temporibus quod nulla nesciunt aliquid debitis ullam omnis quos ipsam, aspernatur id excepturi hic.</p>
-
+                <h5 class="text-uppercase font-weight-bold">Our Location</h5>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28946.568149504525!2d67.07389588334503!3d24.921131697392767!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb338b808bfd6b1%3A0x997b1a02c2570822!2sGulshan-e-Iqbal%2C+Karachi%2C+Karachi+City%2C+Sindh%2C+Pakistan!5e0!3m2!1sen!2s!4v1556303841967!5m2!1sen!2s" width="600" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
             </div>
           </div>
         </div>

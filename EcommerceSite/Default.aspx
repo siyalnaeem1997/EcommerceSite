@@ -46,7 +46,7 @@
             <div class="col-md-4 col-sm-12">
                 <div class="panel">
                     <div class="panel-body">
-                        <img src="images/image2.jpg" height="300" width="350" alt="ShoeImg" />
+                        <img src="images/image2.jpg" style="width:100%;height:300px" alt="ShoeImg" />
                     </div>
                     <div class="panel-footer text-center">
                         <h3>Shoes</h3>
@@ -56,7 +56,7 @@
             <div class="col-md-4 col-sm-12">
                 <div class="panel">
                     <div class="panel-body">
-                        <img src="images/shirt3.png"  height="300" alt="ShoeImg" />
+                        <img src="images/shirt3.png" style="width:100%;height:300px" alt="ShoeImg" />
                     </div>
                     <div class="panel-footer text-center">
                         <h3>Shirts</h3>
@@ -66,7 +66,7 @@
             <div class="col-md-4 col-sm-12">
                 <div class="panel">
                     <div class="panel-body">
-                        <img src="images/watch3.jpg" height="300" alt="ShoeImg" />
+                        <img src="images/watch3.jpg" style="width:100%;height:300px" alt="ShoeImg" />
                     </div>
                     <div class="panel-footer text-center">
                         <h3>Watches</h3>
@@ -75,7 +75,6 @@
             </div>
         </div>
 
-        <div class="">
             <div id="productSectionHeading">
                 <h2 class="text-center"> Products </h2>
             </div>
@@ -87,19 +86,24 @@
     {
         foreach (var item in products_list)
         { %>
-
+                
                 <div class="col-md-4 col-sm-12">
                     <div class="panel">
                         <div class="panel-body">
-                            <img src="<%=item.img %>"" height="300" width="300" draggable="false" alt="ShoeImg" />
+                            <a href="productDescription.aspx>pro_id=<%= item.id %>"><img src="<%=item.img %>" style="width:100%;height:300px" draggable="false" alt="Product-Image" /></a>
+                            <br />
+                            <br />
+                            <p class="text-center"><%=item.name %></p>
                         </div>
                         <div class="panel-footer text-center">
-                            <p><%=item.name %></p>
-                            <p><%=item.price %></p>
+                            
+                            <a href="productDescription.aspx>pro_id=<%= item.id %>"><p class="price">Rs <%=item.price %></p></a>
+                            <br />
+                            <br />
+                            <p><a class="buyBtn" href="Default.aspx?pro_id=<%= item.id %>&action=add">Add to Cart</a></p>
                         </div>
                     </div>
                 </div>
-
                 <%}
                     }
                     else {%>
@@ -107,7 +111,6 @@
                     <% } %>
 
             </div>
-        </div>
 
     </div>
 

@@ -23,4 +23,98 @@
 #productSectionHeading{
     margin-top:100px;
     margin-bottom:100px; 
+    
 }
+
+#adminPanel{
+background-color:white;
+margin-top:60px;
+}
+#adminPanel .panel-header{
+    font-size:28px;
+    font-weight:bold;
+    letter-spacing:1px;
+}
+#adminPanel .panel-header small{
+    font-size:16px;
+}
+.panel-body p{
+    font-size: 18px;
+}
+#adminUsername,#adminPasswd{
+    width:30%;
+    height:40px;
+    padding:20px;
+}
+#adminPanelSubmitBtn{
+    width:80px;
+    height:30px;
+    background-color:#95A5A6;
+    color:white;
+}
+#adminPanelSubmitBtn:hover{
+    width:90px;
+    height:30px;
+    background-color:#D0D3D4;
+    color:white;
+    transition:.3s all ease;
+}
+.header a{
+    font-size:36px;
+    text-decoration:none;
+    color:black;
+}
+.BacktoSiteLink{
+    font-size:11px;
+    text-decoration:none;
+    color:dodgerblue;
+}
+#Label3{
+    color:red;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.price {
+  color: black;
+  font-weight:bold;
+  font-size: 22px;
+}
+
+.buyBtn {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+  text-decoration:none;
+}
+.buyBtn:hover{
+    text-decoration:none;
+    color:white;
+    background-color:#566573;
+}
+
+
+.card button:hover {
+  opacity: 0.7;
+}
+#cart_label{
+    font-size:14px;
+    font-weight:bold;
+    color:black;
+}
+.text-right{
+    text-align:right;
+}
+
