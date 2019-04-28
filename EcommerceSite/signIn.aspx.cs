@@ -47,7 +47,7 @@ namespace EcommerceSite
                     {
                         Session["loggedIn"] = email;
                         Response.Redirect("Default.aspx");
-
+                        Session.RemoveAll();
                     }
                 }
             }

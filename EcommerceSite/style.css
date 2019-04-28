@@ -117,4 +117,12 @@ margin-top:60px;
 .text-right{
     text-align:right;
 }
-
+.right{
+    text-align:right;
+}
+.mt-2{
+    margin-top:5px;
+}
+.center{
+    text-align:center !important;
+}

@@ -30,54 +30,58 @@
             <div class="collapse navbar-collapse" id="myNavbar">
               <ul class="nav navbar-nav">
                 <li><a href="Default.aspx">Home</a></li>
-                <li><a href="#productSectionHeading">Shop</a></li>
+                <li><a href="Default.aspx">Shop</a></li>
                 <li><a href="contact.aspx">Contact Us</a></li>
                 <li><a href="about.aspx">About</a></li>
               </ul>
               <ul class="nav navbar-nav navbar-right">
                 <li><a href="cartPage.aspx"><asp:Label runat="server" ID="cart_label" Text="0"></asp:Label>&nbsp;&nbsp;<span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
-                  <asp:Panel ID="Panel1" runat="server">
-                      <li><a href="signUp.aspx"><span class="glyphicon glyphicon-user"></span>Sign Up</a></li>
-                      <li><a href="signIn.aspx"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
+                 <li class="mt-2"><asp:Panel ID="Panel1" runat="server" Visible="true">
+                      <div class="row right">
+                          <div class="col-md-12">
+                              <a href="signUp.aspx" class="btn btn-default"><span class="glyphicon glyphicon-user"></span>&nbsp;Sign Up</a>
+                              <a href="signIn.aspx" class="btn btn-success"><span class="glyphicon glyphicon-log-in"></span>&nbsp;Login</a>
+                          </div>
+                      </div>
                   </asp:Panel>
-                  <asp:Panel ID="Panel2" runat="server" Visible="true">
-                      <li><a href="Default.aspx"><span class="glyphicon glyphicon-log-in"></span>Logout</a></li>
-                  </asp:Panel>
+                  <asp:Panel ID="Panel2" runat="server" Visible="false">
+                      <a href="Default.aspx?loggedOut">
+                          <asp:Button ID="Button1" runat="server" CssClass="btn btn-danger" Text="Logout" /></a>
+                  </asp:Panel></li>
               </ul>
             </div>
           </div>
         </nav>
-
+        
         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
         
         </asp:ContentPlaceHolder>
 
 
-    <footer class="page-footer font-small teal pt-4">
-        <div class="container-fluid text-center text-md-left">
-        <hr class="clearfix w-100 d-md-none pb-3" />
-          <div class="row">
-            <div class="col-md-6 mt-md-0 mt-3">
-              <h5 class="text-uppercase font-weight-bold">Quick Links</h5>
-              <ul>
-                  <li class="nav"><a href="Default.aspx">Home</a></li>
-                  <li class="nav"><a href="#productSectionHeading">Shop</a></li>
-                  <li class="nav"><a href="contact.aspx">Contact</a></li>
-                  <li class="nav"><a href="about.aspx">About</a></li>
-              </ul>
+        <footer class="panel-footer" style="background-color:whitesmoke">
+            <div class="container">
 
+                    <div class="col-md-6 col-sm-12">
+                        <h5 class="text-uppercase">Quick Links</h5>
+                        <ul>
+                            <li class="nav"><a href="Default.aspx">Home</a></li>
+                            <li class="nav"><a href="#productSectionHeading">Shop</a></li>
+                            <li class="nav"><a href="contact.aspx">Contact</a></li>
+                            <li class="nav"><a href="about.aspx">About</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <h5 class="text-uppercase">Our Location</h5>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28946.568149504525!2d67.07389588334503!3d24.921131697392767!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb338b808bfd6b1%3A0x997b1a02c2570822!2sGulshan-e-Iqbal%2C+Karachi%2C+Karachi+City%2C+Sindh%2C+Pakistan!5e0!3m2!1sen!2s!4v1556303841967!5m2!1sen!2s" width="400" height="200" frameborder="0" style="border:0"></iframe>
+                    </div>
+                
             </div>
-            <div class="col-md-6 mb-md-0 mb-3">
-                <h5 class="text-uppercase font-weight-bold">Our Location</h5>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28946.568149504525!2d67.07389588334503!3d24.921131697392767!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb338b808bfd6b1%3A0x997b1a02c2570822!2sGulshan-e-Iqbal%2C+Karachi%2C+Karachi+City%2C+Sindh%2C+Pakistan!5e0!3m2!1sen!2s!4v1556303841967!5m2!1sen!2s" width="600" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <div class="container" style="margin-bottom:5px;margin-top:15px;">
+                <div class="col-md-12 col-sm-12"><b>
+                    &copy; 2019 Copyrights; EcommerceSite
+                </b></div>
             </div>
-          </div>
-        </div>
-
-        <div class="footer-copyright text-center py-3">© 2019 Copyright:
-          <a href="#"> EcommerceSite</a>
-        </div>
-    </footer>
+        </footer>
 
     </div>
     </form>

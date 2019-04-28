@@ -18,17 +18,25 @@ namespace EcommerceSite
                 cart_label.Text = cart_list.Count.ToString();
             }
             
-            if(Session["loggedIn"] == null)
-            {
-                Panel1.Visible = true;
-                Panel2.Visible = false;
-            }
-            else
+            if(Session["loggedIn"] != null)
             {
                 Panel1.Visible = false;
                 Panel2.Visible = true;
             }
+            else
+            {
+                Panel1.Visible = true;
+                Panel2.Visible = false;
+            }
 
+
+
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Session.RemoveAll();
+            Response.Redirect("Default.aspx");
         }
     }
 }

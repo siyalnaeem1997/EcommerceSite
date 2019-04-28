@@ -17,7 +17,7 @@
 <body>
     <form id="form1" runat="server">
     <div>
-        <nav class="navbar navbar-inverse">
+        <nav class="navbar navbar-default">
           <div class="container-fluid">
             <div class="navbar-header">
               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -29,12 +29,12 @@
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
               <ul class="nav navbar-nav">
-                <li class="active"><a href="insertNewItem.aspx">Insert New Item</a></li>
+                <li><a href="insertNewItem.aspx">Insert New Item</a></li>
                 <li><a href="removeAnItem.aspx">Remove An Item</a></li>                
                 <li><a href="allOrders.aspx">Orders</a></li>
               </ul>
               <ul class="nav navbar-nav navbar-right">
-                <li><span class="glyphicon glyphicon-log-out"></span><a href="../../Default.aspx"> <asp:Button ID="adminPanelSignOutBtn" runat="server" Text="Sign Out" /></a></li>
+                <li><a href="../Default.aspx" class="btn btn-danger" style="height:40px;margin-top:5px;color:white;padding:5px;padding-top:10px;">Sign Out</a></li>
               </ul>
             </div>
           </div>
@@ -42,21 +42,23 @@
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         
         </asp:ContentPlaceHolder>
+        <br />
+        <br />
+        <br />
+        <footer class="panel-footer" style="background-color:whitesmoke">
+            <div class="container">
 
-        <footer class="page-footer font-small teal pt-4">
-        <div class="container-fluid text-center text-md-left">
-        <hr class="clearfix w-100 d-md-none pb-3" />
-          <div class="row">
-            <div class="col-md-12 mt-md-0 mt-3">
-              
-                <h3>AdminPanel - EcommerceSite &copy; All Rights Reserved</h3>
-
-          </div>
-        </div>
-
-        <div class="footer-copyright text-center py-3">© 2019 Copyright:
-          <a href="#"> EcommerceSite</a>
-        </div>
+                    <div class="col-md-12 col-sm-12">
+                        <h3><b>AdminPanel - EcommerceSite</b></h3>
+                    </div>
+                
+            </div>
+            <div class="container" style="margin-bottom:5px;margin-top:15px;">
+                <div class="col-md-12 col-sm-12"><b>
+                    &copy; 2019 Copyrights; EcommerceSite
+                </b></div>
+            </div>
+        </footer>
     </footer>
     </div>
     </form>
